@@ -1,13 +1,13 @@
-#include "product.h"
+﻿#include "product.h"
 
 Product::Product(string name, double unitPrice)
-	: name(name), unitPrice(unitPrice)
+: name(name), unitPrice(unitPrice)
 {
 }
 Product::~Product()
 {
-}
+} 
 double Product::getPrice() const
 {
-	return unitPrice;
+  return unitPrice;
 }

@@ -1,19 +1,23 @@
-/**************************************************************
- * Invoice Å¬·¡½ºÀÇ ÀÎÅÍÆäÀÌ½º ÆÄÀÏ                           *
+ï»¿/**************************************************************
+ * Invoice í´ë˜ìŠ¤ì˜ ì¸í„°í˜ì´ìŠ¤ íŒŒì¼                           *
  **************************************************************/
 #ifndef INVOICE_H
 #define INVOICE_H
 #include "product.h"
+#include "company.h"
 
 class Invoice
 {
-private:
+  private:
     int invoiceNumber;
-    double invoiceTotal;
-public:
-    Invoice(int invoiceNumber);
-    ~Invoice();
+    double invoiceTotal; 
+    Company company;
+  public: 
+    Invoice(int invoiceNumber, string name, string phone);
+      //Invoice(int invoiceNumber, Company company);
+    ~Invoice(); 
     void add(int quantity, Product product);
-    void print() const;
+    void print() const; 
+    //void print(Company company) const;
 };
 #endif

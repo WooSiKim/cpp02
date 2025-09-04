@@ -1,25 +1,30 @@
-/**************************************************************
- * Invoice Å¬·¡½ºÀÇ ±¸Çö ÆÄÀÏ                                 *
+ï»¿/**************************************************************
+ * Invoice í´ë˜ìŠ¤ì˜ êµ¬í˜„ íŒŒì¼                                 *
  **************************************************************/
 #include "invoice.h"
 
- // »ı¼ºÀÚ
-Invoice::Invoice(int invNum)
-	: invoiceNumber(invNum), invoiceTotal(0.0)
+// ìƒì„±ì
+//Invoice::Invoice(int invNum, Company company)
+//: invoiceNumber(invNum), invoiceTotal(0.0), company(company)
+//{  
+//}
+ Invoice::Invoice(int invoiceNumber, string name, string phone)
+: invoiceNumber(invoiceNumber), invoiceTotal(0.0), company(name, phone)
+{  
+}
+// ì†Œë©¸ì
+Invoice::~Invoice() 
 {
 }
-// ¼Ò¸êÀÚ
-Invoice::~Invoice()
-{
-}
-// add ¸â¹ö ÇÔ¼ö
+// add ë©¤ë²„ í•¨ìˆ˜
 void Invoice::add(int quantity, Product product)
 {
-	invoiceTotal += quantity * product.getPrice();
+  invoiceTotal += quantity * product.getPrice();
 }
-// print ¸â¹ö ÇÔ¼ö
+// print ë©¤ë²„ í•¨ìˆ˜
 void Invoice::print() const
 {
-	cout << "Ã»±¸ ¹øÈ£: " << invoiceNumber << endl;
-	cout << "Ã»±¸ ±İ¾×: " << invoiceTotal << endl;
+	company.print();
+   cout << "ì²­êµ¬ ë²ˆí˜¸: " << invoiceNumber << endl;
+   cout << "ì²­êµ¬ ê¸ˆì•¡: " << invoiceTotal << endl;
 }
