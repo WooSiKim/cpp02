@@ -1,34 +1,42 @@
 ```mermaid
 
-classDiagram
 
-&nbsp;   direction LR
+
+classDiagram
 
 &nbsp;   class Pokemon {
 
-&nbsp;       <<virtual>> ~Pokemon()
+&nbsp;       +Pokemon()
 
-&nbsp;       +virtual void attack()
+&nbsp;       +~Pokemon() virtual
+
+&nbsp;       +attack() virtual void
 
 &nbsp;   }
 
-    class Pikachu {
+&nbsp;   
 
-        ~Pikachu()
+&nbsp;   class Pikachu {
 
-        +void attack()
+&nbsp;       +Pikachu()
 
-    }
+&nbsp;       +~Pikachu()
 
+&nbsp;       +attack() void
 
+&nbsp;   }
 
-    class Squirtle {
+&nbsp;   
 
-        ~Squirtle()
+&nbsp;   class Squirtle {
 
-        +void attack()
+&nbsp;       +Squirtle()
 
-    }
+&nbsp;       +~Squirtle()
+
+&nbsp;       +attack() void
+
+&nbsp;   }
 
 
 
@@ -36,5 +44,5 @@ classDiagram
 
 &nbsp;   Pokemon <|-- Squirtle : inheritance
 
-```
+&nbsp;  ```
 
