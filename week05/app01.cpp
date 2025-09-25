@@ -20,10 +20,16 @@ public:
 
 int main()
 {
-	Animal a;
-	Dog d;
-	Cat c;
-	cout << typeid(d).name() << endl;
-	d.makeSound();
+	Animal* pa = new Animal;
+
+	pa->makeSound();
+	delete pa;
+	pa = nullptr;
+
+	pa = new Dog();
+	pa->makeSound();
+	delete pa;
+	pa = nullptr;
+
 	return 0;
 }
