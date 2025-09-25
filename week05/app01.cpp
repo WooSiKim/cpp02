@@ -22,8 +22,11 @@ int main()
 {
 	Animal* pa = new Dog();
 	pa->makeSound();
+	cout << pa << endl;
 
-	Cat* pc = (Cat*)pa;
+	//Cat* pc = (Cat*)pa;
+	Dog* pc = dynamic_cast<Dog*>(pa);
+	cout << pc << endl;
 	pc->makeSound();
 	delete pc;
 	pc = nullptr;
