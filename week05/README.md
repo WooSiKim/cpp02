@@ -1,7 +1,5 @@
 ```mermaid
 
-
-
 classDiagram
 
 &nbsp;   class Animal {
@@ -44,15 +42,7 @@ classDiagram
 
 &nbsp;       <<interface>>
 
-&nbsp;   }
-
-&nbsp;   
-
-&nbsp;   note for Animal "Pure Virtual Function으로\\n추상 클래스가 됨"
-
-&nbsp;   note for Dog "makeSound(): 멍멍!"
-
-&nbsp;   note for Cat "makeSound(): 야옹~"
+&nbsp;   }   
 
 ```
 
