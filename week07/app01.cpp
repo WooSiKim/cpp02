@@ -1,14 +1,21 @@
 #include <iostream>
 using namespace std;
 
-class UndergraduateStudent {
+class Person {
 public:
+	string name;
+	virtual void warn() = 0;
+};
+class UndergraduateStudent : public Person{
+public:
+	double gpa;
 	void warn() { cout << "학사경고\n"; };
 
 };
 
-class DormitoryStudent {
+class DormitoryStudent : public Person{
 public:
+	int rommNumber;
 	void warn() { cout << "벌점부여\n"; };
 };
 
@@ -21,6 +28,7 @@ int main() {
 	UndergraduateDormitoryStudent uds;
 	//uds.warn();
 	uds.DormitoryStudent::warn();
+	//uds.name = "Kim" /죽음의다이아몬드
 
 	return 0;
 }
