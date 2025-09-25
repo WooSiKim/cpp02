@@ -5,7 +5,7 @@ using namespace std;
 class Animal 
 {
 public:
-	void makeSound() { cout << "동물이 소리를 냄\n"; }
+	virtual void makeSound() { cout << "동물이 소리를 냄\n"; }
 };
 class Dog : public Animal
 {
@@ -20,16 +20,13 @@ public:
 
 int main()
 {
-	Animal* pa = new Animal;
-
+	Animal* pa = new Dog();
 	pa->makeSound();
-	delete pa;
-	pa = nullptr;
-
-	pa = new Dog();
-	pa->makeSound();
-	delete pa;
-	pa = nullptr;
+	//Dog* pd = (Dog*)pa;
+	Dog* pd = dynamic_cast<Dog*>(pa);
+	pd->makeSound();
+	delete pd;
+	pd = nullptr;
 
 	return 0;
 }
