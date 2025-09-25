@@ -22,11 +22,16 @@ int main()
 {
 	Animal* pa = new Dog();
 	pa->makeSound();
+
+	Cat* pc = (Cat*)pa;
+	pc->makeSound();
+	delete pc;
+	pc = nullptr;
 	//Dog* pd = (Dog*)pa;
-	Dog* pd = dynamic_cast<Dog*>(pa);
-	pd->makeSound();
-	delete pd;
-	pd = nullptr;
+	//Dog* pd = dynamic_cast<Dog*>(pa);
+	//pd->makeSound();
+	//delete pd;
+	//pd = nullptr;
 
 	return 0;
 }
