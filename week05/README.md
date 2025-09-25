@@ -1,14 +1,12 @@
 ```mermaid
 
-
-
 classDiagram
 
 &nbsp;   class Animal {
 
 &nbsp;       <<abstract>>
 
-&nbsp;       +makeSound()\* void
+&nbsp;       +makeSound() void
 
 &nbsp;   }
 
@@ -30,25 +28,13 @@ classDiagram
 
 &nbsp;   
 
-&nbsp;   %% 상속 관계
+&nbsp;   Animal <|-- Dog
 
-&nbsp;   Animal <|-- Dog : inherits
-
-&nbsp;   Animal <|-- Cat : inherits
+&nbsp;   Animal <|-- Cat
 
 &nbsp;   
 
-&nbsp;   %% 클래스 스타일링
-
-&nbsp;   class Animal {
-
-&nbsp;       <<interface>>
-
-&nbsp;   }
-
-&nbsp;   
-
-&nbsp;   note for Animal "Pure Virtual Function으로\\n추상 클래스가 됨"
+&nbsp;   note for Animal "Pure Virtual Function으로 추상 클래스가 됨"
 
 &nbsp;   note for Dog "makeSound(): 멍멍!"
 
