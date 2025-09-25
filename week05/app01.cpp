@@ -20,21 +20,8 @@ public:
 
 int main()
 {
-	Animal* pa = new Dog();
-	pa->makeSound();
-	cout << pa << endl;
-
-	//Cat* pc = (Cat*)pa;
-	Dog* pc = dynamic_cast<Dog*>(pa);
-	cout << pc << endl;
-	pc->makeSound();
-	delete pc;
-	pc = nullptr;
-	//Dog* pd = (Dog*)pa;
-	//Dog* pd = dynamic_cast<Dog*>(pa);
-	//pd->makeSound();
-	//delete pd;
-	//pd = nullptr;
+	Animal animal;
+	animal.makeSound();
 
 	return 0;
 }
