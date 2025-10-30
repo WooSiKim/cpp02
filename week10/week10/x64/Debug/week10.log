@@ -1,3 +1,0 @@
-﻿  app01.cpp
-D:\cpp02\week10\app01.cpp(6,8): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  week10.vcxproj -> D:\cpp02\week10\x64\Debug\week10.exe
