@@ -3,5 +3,5 @@
 *.vcxproj.filters
 *vcxproj.user
 .vs/
-week0*/week*/
-week0*/x64/
+week*/week*/
+week*/x64/

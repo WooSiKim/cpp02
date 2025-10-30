@@ -5,7 +5,7 @@ using namespace std;
 class Animal 
 {
 public:
-	virtual void makeSound() { cout << "동물이 소리를 냄\n"; }
+	virtual void makeSound() = 0;
 };
 class Dog : public Animal
 {
@@ -21,7 +21,6 @@ public:
 int main()
 {
 	Animal animal;
-	animal.makeSound();
 
 	return 0;
 }
