@@ -2,23 +2,29 @@
 using namespace std;
 
 template <typename T>
-void swap(T* first, T* second)
-{
-	T temp = *first;
-	*first = *second;
-	*second = temp;
+void display(T value) {
+	cout << "Generic display : " << value << "\n";
+}
+
+template <>
+void display<char>(char value) {
+	cout << "Specialized display for char : " << value << "\n";
+}
+
+template <>
+void display<const char*>(const char* value) {
+	cout << "Specialized display for c style string : " << value << "\n";
 }
 
 int main()
 {
-	int i1 = 11;
-	int i2 = 76;
-	swap(i1, i2);
-	cout << i1 << "  " << i2 << endl;
+	//generic
+	display(3.23);
+	display(50);
+	//specialized
+	display('2');
+	display("2");
+	display("HI");
 
-	double d1 = 51.5;
-	double d2 = 42.7;
-	swap(&d1, &d2);
-	cout << d1 << "  " << d2 << endl;
 	return 0;
 }
